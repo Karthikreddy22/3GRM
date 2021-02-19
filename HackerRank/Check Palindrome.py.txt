@@ -1,0 +1,9 @@
+K=int(input())
+while(K>0):
+    x=int(input())
+    s=input()
+    if s==s[::-1]:
+        print("Yes")
+    else:
+        print("No")
+    K-=1

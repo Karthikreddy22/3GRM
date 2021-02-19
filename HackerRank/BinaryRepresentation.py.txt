@@ -1,0 +1,6 @@
+K=int(input())
+while(K>0):
+    B = int(input())
+    p=bin(B)
+    print(p[2:])
+    K-=1

@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        int a[]=new int[num];
+        for(int i=0;i<num;i++)
+            a[i]=sc.nextInt();
+        Arrays.sort(a);
+        int x=sc.nextInt();
+        for(int i=0;i<x;i++)
+        {
+            int y=sc.nextInt();
+            floor(a,num,y);
+        }
+    }
+    public static void floor(int a[],int num,int y)
+    {
+        int l=0,h=num-1;
+        int result=Integer.MIN_VALUE;
+        while(l<=h)
+        {
+            int mid=(l+h)/2;
+            if(a[mid]<=y)
+            {
+                result=a[mid];
+                l=mid+1;
+            }
+            else{
+                h=mid-1;
+            }
+        }
+        System.out.println(result);
+    }
+}

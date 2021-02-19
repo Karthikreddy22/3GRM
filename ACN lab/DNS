@@ -1,0 +1,35 @@
+import java.io.*;
+import java.net.*;
+import java.util.*;
+public class dns
+{ public static void main(String args[])
+ { int n;
+  Scanner sc=new Scanner(System.in);
+  do
+   { System.out.println("MENU : 1:DNS 2:REVERSE DNS 3:EXIT");
+     System.out.println("enter your choice:");
+     n=sc.nextInt();
+     if(n==1)
+     { try
+      { System.out.print("enter host name:");
+        String name=sc.next();
+        Inetaddress address=Inetaddress.getByName(name);
+        System.out.print("host name :"+address.getHostAddress());
+      }
+      catch(Exception ioe)
+      { System.out.println(ioe);
+      }
+    }  if(n==2)
+    { try
+     { System.out.println("enter ip address");
+       String name=sc.next();
+       InetAddress id=InetAddress.getByName(num);
+       System.out.print("host name:"+id.getHostName());
+     }
+     catch(exception ioe)  
+     { System.out.print(ioe);
+     }
+    }
+  }  while(!(n==3));
+ }
+}   

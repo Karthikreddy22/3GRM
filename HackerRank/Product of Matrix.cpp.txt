@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    int t,n1,m1,A1[10][10],A2[10][10],n2,m2,sum=0;
+    scanf("%d",&t);
+    for(int i=0;i<t;i++)
+    {
+        scanf("%d",&n1);
+        scanf("%d",&m1);
+        for(int i=0;i<n1;i++)
+        {
+            for(int j=0;j<m1;j++)
+            {
+                scanf("%d",&A1[i][j]);
+            }
+        }
+        scanf("%d",&n2);
+        scanf("%d",&m2);
+        for(int i=0;i<n2;i++)
+        {
+            for(int j=0;j<m2;j++)
+            {
+                scanf("%d",&A2[i][j]);
+            }
+        }
+        for(int l=0;l<n1;l++)
+        {
+            for(int z=0;z<m2;z++)
+            {
+                for(int w=0;w<n2;w++)
+                {
+                    sum=sum+A1[l][w]*A2[w][z];
+                }
+                printf("%d ",sum);
+                sum=0;
+            }
+            printf("\n");
+        }
+        
+    }
+    return 0;
+}

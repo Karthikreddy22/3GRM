@@ -1,0 +1,8 @@
+K=int(input())
+while(K>0):
+    A1,A2=map(str, input().split())
+    if(sorted(A1) == sorted(A2)):
+        print('True')
+    else:
+        print('False')
+    K-=1

@@ -1,0 +1,10 @@
+K=int(input())
+for i in range(K):
+    B=int(input())
+    G=B-1
+    print('Case #'+str(i+1)+':')
+    for j in range(B):
+        print(' '*G, end='')
+        print('*' * (j+1))
+        G-=1
+    

@@ -1,0 +1,12 @@
+K=int(input())
+while(K>0):
+    S = 0
+    I = int(input())
+    A = list(map(int, input().split()))
+    for b in range(I-1):
+        for c in range(I-b-1):
+            if A[c] > A[c+1]:
+                A[c],A[c+1] = A[c+1],A[c]
+                S+=1
+    print(S)
+    K-=1
